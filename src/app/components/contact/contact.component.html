@@ -1,0 +1,78 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div id="activities-title">
+    <h1>{{title}}</h1>
+</div>
+
+<div id="contact-container">
+
+
+    <div class="contact-info-location" id="location">
+        <h3>Location</h3>
+        <p>Kilómetro 39 via la Guajira</p>
+    </div>
+    <div id="contact-map-google">
+        <a href="https://www.google.com/maps/place/Juan+Valdez+Caf%C3%A9/@3.4545697,-76.5379827,18.48z/data=!4m6!3m5!1s0x8e30a7d1d63f5581:0xe81579859198e1ae!8m2!3d3.4542682!4d-76.5368567!16s%2Fg%2F11hywq6lbv?entry=ttu" target="_blank">
+            <img src="../../../assets/pictures/ubicacion-calenitoHostel.png">
+        </a>
+    </div>
+
+    <div id="contac-email">
+        <div id="text-email">
+            <div class="email-margin-text">
+                <div>                  
+                <h2 class="email-title">Contact Us</h2>
+                </div>
+                <div class="text-content-email">
+                    <p class="text-email">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.   
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+                        <br>
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.       </p>
+                </div>                   
+            </div>                
+        </div>
+        <div class="container-email" [formGroup]="form">
+            
+            <form action="javascript:void(0)" (submit)="send()" class="form-contact">
+                
+                <h3>Get in Touch</h3>
+                <input formControlName="from_name" type="text" id="name" placeholder="Your Name" required>
+                <input formControlName="from_email"type="email" id="email" placeholder="Email id" required>
+                <input formControlName="subject" type="text" id="phone" placeholder="Phone no." required>
+                <textarea formControlName="message" id="message" rows="10" placeholder="How can we help you?"></textarea>
+                <button type="submit">Send</button>
+                
+            </form>
+            
+        </div>
+    </div>
+    <div class="contact-info-location call-follow" id="call">
+        <h3>Call</h3>
+        <div>
+        <p>WhatsApp: <a>+57 322 552 2597</a></p>
+        <p>Cellphone: <a>+57 322 552 2597</a></p>
+        </div>
+    </div>
+    <div class="contact-info-location call-follow" id="follow">
+        <h3>Follow Us</h3>
+        <div id="logo-contact">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+   
+
+
+
+
+
+

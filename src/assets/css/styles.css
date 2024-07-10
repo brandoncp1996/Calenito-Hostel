@@ -1,0 +1,2630 @@
+/* ------------------  Inportar fuentes custom ----------------------- */
+
+@font-face {
+    font-family: "cooperBlack";
+    src: url("../fonts/cooperBlack/Cooper_Black_Condensed_Regular/CooperBlackCondensedRegular.ttf")
+}
+
+@font-face {
+    font-family: "garamod_I";
+    src: url("../fonts/AdobeGaramondProItalic.ttf")
+}
+
+@font-face {
+    font-family: "garamond_B";
+    src: url("../fonts/AdobeGaramondProBold.ttf")
+}
+
+/* -- Google Garamond --*/
+
+@font-face {
+    font-family: "garamond_medium";
+    src: url("../fonts/GaramondGoogle/Cormorant_Garamond/CormorantGaramond-Medium.ttf")
+}
+
+@font-face {
+    font-family: "garamond_medium-Italic";
+    src: url("../fonts/GaramondGoogle/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf")
+}
+
+@font-face {
+    font-family: "garamond_light";
+    src: url("../fonts/GaramondGoogle/Cormorant_Garamond/CormorantGaramond-Light.ttf")
+}
+
+@font-face {
+    font-family: "garamond_light-Italic";
+    src: url("../fonts/GaramondGoogle/Cormorant_Garamond/CormorantGaramond-LightItalic.ttf")
+}
+
+@font-face {
+    font-family: "garamond_semiBold-Italic";
+    src: url("../fonts/GaramondGoogle/Cormorant_Garamond/CormorantGaramond-SemiBoldItalic.ttf")
+}
+
+
+/* ---------------------------- Generales -------------------------- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border-color: #ff5361;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "garamond_B";
+    font-size: 1.2vw;
+    background: rgb(255, 252, 244);
+    background-attachment: fixed;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+h1 {
+    font-family: "cooperBlack";
+    color: #7a6b6bc6;
+}
+
+h2, h3, p, a, h4 {
+    color: rgb(98, 88, 88, 0.9);
+}
+
+
+
+/* ----------------  Barra de navegacion ** Formato COMPLETO  --------------------*/
+
+
+header {
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 90px;
+    background: rgb(255, 252, 244); /*rgb(256,236,220);*/
+    position: fixed;
+}
+
+#container-menu{
+    width: 100%;
+}
+
+#inner-menu {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    border-bottom: solid;
+    border-bottom-width: 1.5px;
+    border-color: #7b6868;
+}
+
+.ul-menu {
+    display: block;
+    width: 100%;
+    height: inherit;
+    margin: 0px;
+}
+
+.ul-menu li {
+    display: inline-block;
+    margin: 0px auto;
+    line-height: 75px;
+    margin-right: 19px;
+}
+
+.ul-menu a {
+    display: block;
+    margin-top: 10px;
+    /*para acomodar la linea del borde*/
+    margin-bottom: -5px;
+    height: inherit;
+    text-decoration: none;
+    color: #7a6b6bc6;
+    transition: all 300ms;
+}
+
+#ul-center li {
+    display: block;
+    text-align: center;
+}
+
+#ul-left {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#ul-right {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.list a {
+    padding-top: 9px;
+}
+
+.logo a{
+    font-family: "cooperBlack";
+    font-size: 2.9vw;
+}
+
+
+/* ----------------  Barra de navegacion ** Formato MENU-HAMBURGER  --------------------*/
+
+
+
+/*------- Menu Hamburger --------*/
+
+#sidebarMenu {
+    height: 93.4%; /*change here related your menu height -171*/
+    position: fixed;
+    overflow: none;
+    width: 90%;
+    z-index: 100;
+    transform: translateY(-1710px); /*change here related your menu height -171*/
+    background-color: rgb(255, 252, 244);
+    /* Para colocar todo en la mitad */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 6.5px;*/
+}
+
+#sidebarMenu .main-content-wrapper {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.main-content-wrapper a{
+    width: 100%;
+    display: block; 
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: #7a6b6bc6;
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+.main-content-wrapper a:hover {
+    color: rgb(171, 107, 109);
+}
+
+#sidebarMenu::-webkit-scrollbar {
+    width: 12px;
+}
+#sidebarMenu::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px; 
+}
+#sidebarMenu::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    background: #0000002e;
+    height: 50px;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translatey(0);
+    top:65px /*change here related your top menu height*/
+}
+
+#home-burger {
+    display: none;
+}
+
+body:has(#home-burger:hover) #ul-center a {
+    color: rgb(171, 107, 109);
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu #home-burger {
+    display: block;
+    position: absolute;
+    top:-65px;
+    left: 35px;
+    width: 210px;
+    height: 65px;
+}
+
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: block;
+    z-index: 99;
+    height: 22px;
+    width: 35px;
+    left:10px;
+    top:10px;
+    display: none;
+    margin: 26px 10px 0px 0px;
+
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #7a6b6bc6;
+    margin-top: 5px;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+    opacity: 0;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 10px; /* margin-top: 8px; */
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -7px; /* margin-top: 8px; */
+}
+
+/* -- Cambios de estilo con menu-Hamburger -- */
+
+@media screen and (max-width: 1250px) {
+    .sidebarIconToggle{
+        display:block
+    }
+    
+    #container-menu .list{
+        display:none;
+    }
+
+    .logo a{
+        font-size: 30px;
+        text-align: left;
+        margin-left: 3vw;
+        margin-top: 0px;
+        width: 210px;
+    }  
+    
+    header {
+        height: 70px;
+    }
+
+}
+
+@media screen and (min-width: 1250px) {
+    #sidebarMenu {
+        display: none;
+    }
+}
+
+/*---------- EFECTOS AL PASAR SOBRE EL MENU -----------*/
+
+header .ul-menu a:hover, 
+.actived {
+    font-style: "garamond_B";
+    /*background: rgba(0, 0, 0, 1);*/
+    color: rgb(171, 107, 109);
+    /*height: 70px;*/
+}
+
+/* Contenedor principal */
+
+#content {
+    width: 100%;
+    margin: 0px auto;
+    background: rgb(255, 252, 244);
+    /*height: 90%;*/
+    padding-top: 100px;
+    display: grid;
+}
+
+#main-homepage {
+    width: inherit;
+    height: 100%;
+    background: rgb(255, 252, 244);
+    /*padding-left: 75px;*/
+}
+
+#content-homepage {
+    width: inherit;
+    height: 430px;
+    background: rgb(256,236,220);
+}
+
+/*----------------Footer ----------------*/
+
+footer {
+    clear: both;
+    position: relative;
+    /*height: 200px;*/
+    background: rgba(240, 233, 205, 0.827);
+}
+
+    #footer-container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    }
+
+        #footer-rules {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-top: 5vw;
+            padding-bottom: 4vw;
+        }
+
+            #footer-rules img{
+                display: grid;
+                margin: 0 auto;
+                filter: sepia();
+            }
+
+            .text-footer {
+                padding-left: 4vw;
+                padding-right: 4vw;
+            }
+
+            .text-footer h4 {
+                font-size: 25px;
+                font-family: 'garamond_B';
+            }
+
+            .text-footer p, .text-footer li {
+                font-family: 'garamond_light';
+                font-size: 20px;
+            }
+
+            .text-footer li {
+                color: rgb(98, 88, 88, 0.9);
+            }
+
+    #footer-end {
+        display: grid;
+        background-color: rgba(145, 140, 120, 0.827);
+    }
+
+        #links-footer {
+            display: grid;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+            #links-footer ul{
+                display: block;
+                list-style: none;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+
+            #links-footer li {
+                display: inline-block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            #links-footer a {
+                text-decoration: none;
+                margin-right: 0px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 18px;
+            }
+
+            #links-footer a:hover {
+                color: white;
+            }
+
+        #copy {
+            display: grid;
+            margin: 0 auto;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font-size: 17px;
+            color: rgba(240, 233, 205, 0.827);
+        }
+        
+@media screen and (max-width: 1250px) {
+
+    #footer-rules {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 70px;
+        padding-bottom: 6vw;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    #footer-rules {
+        grid-template-columns: 1fr;
+    }
+
+    #footer-rules div{
+        padding-bottom: 50px;
+    }
+
+
+
+}
+
+
+
+
+
+
+/*------- contenerdor principal -------*/
+
+#content {
+    height: 100%;
+    background: rgb(255, 252, 244);
+}
+
+/*---------------------------- HOME PAGE --------------------------------*/
+
+#container-homepage {
+    width: 100%;
+}
+
+#intro {
+    margin: 0 auto;
+    margin-top: 3vw;
+    width: 90%;
+    display: flex;
+    border-bottom: solid;
+    border-bottom-width: 1.5px;
+    border-color: #7b6868;
+}
+
+/*--- description intro -----*/
+
+#description-intro {
+    /*background: green;*/
+    width: 30%;
+}
+
+    /* --- letra curvada --- */
+
+    #curve-welcome {
+        position: absolute; /* absolute */
+        z-index: 9;
+        top: 20px;
+        left: 0px;
+    }
+
+    #curve {
+        fill: transparent;
+        /*fill: black;*/
+    }
+
+    .text-title {
+        font-family: "cooperBlack";
+        font-size: 3.4vw;
+        fill: rgb(165, 165, 236);
+    }
+
+    /* --- contenido de intro ---*/
+
+    .text-content {
+        /*background-color: rgb(255, 83, 97, 0.6);*/
+        /*height: 23vw;*/
+        font-family: "cooperBlack";
+        z-index: 9;
+        position:absolute;
+        width: 26vw;
+        height: 25vw;
+        margin-left: 2.5vw;
+        font-size: 2.3vw;
+        margin-top: 14vw;
+    }
+
+/* --picture--*/
+
+#picture-intro {
+    /*background: yellow;*/
+    width: 70%;
+}
+
+    #slideshow { 
+        margin: 4vw 3.5vw auto;
+        position: relative; 
+        width: 56vw; 
+        height: 38vw; 
+        padding: 10px;
+        margin-bottom: 70px; 
+        /*box-shadow: 0 0 20px rgba(0,0,0,0.4);*/
+        /*background-color: #ff5361;*/
+        /*display: none;*/
+    }
+    
+    #slideshow > div { 
+        position: absolute; 
+        top: 10px; 
+        left: 10px; 
+        right: 10px; 
+        bottom: 10px; 
+        width: 55vw;
+    }
+
+    #slideshow div img{ 
+        width: inherit
+    }
+
+@media screen and (max-width: 1250px) {
+    
+    #intro {
+        display: grid;
+        padding-bottom: 3vw;
+        /*background: yellow;*/
+    }
+
+        #description-intro {
+            display: block;
+            /*background: yellow;*/
+            width: 100%;
+            height: 23vw;
+            order: 2;
+            padding-top: 3vw;
+        }
+
+        .text-content {
+            /*background-color: rgba(235, 191, 194, 0.6);*/ 
+            width: 85vw;
+            height: 20vw;
+            margin-left:1vw;
+            font-size: 3.5vw;
+            margin-left: 3vw;
+            margin-top: 0vw;
+        }
+
+            #curve-welcome {
+                top: 0px;
+            }
+
+                .text-title {
+                    font-family: "cooperBlack";
+                    font-size: 5vw;
+                    /*fill: rgb(165, 165, 236);*/
+                }
+
+        #picture-intro {
+            width: 100%;
+            order: 1;
+            /*background: rgb(0, 128, 0, 0.5); quitar*/
+        }
+
+            #slideshow { 
+                margin: 0 auto; /*4vw 3.5vw*/
+                position: relative; /*relative*/
+                width: 90vw; /* ---- modificado*/ 
+                height: 60.5vw; /* ---- modificado*/ 
+                padding: 0px;
+                margin-bottom: 0px; 
+                /*background-color: #ff5361;*/
+            }
+
+                #slideshow > div { 
+                    position: absolute; 
+                    width: 88vw;
+                    /*background: yellow;*/
+                }
+
+                    #slideshow div img{ 
+                        width: inherit
+                    }
+}
+
+
+/*--- description Rooms -----*/
+
+#rooms-intro {
+    width: inherit;
+}
+
+    #description-rooms {
+        margin: 0 auto;
+        margin-top: 8vw;
+        padding-bottom: 8vw;
+        width: 90%;
+        display: flex;
+        border-bottom: solid;
+        border-bottom-width: 1.5px;
+        border-color: #7b6868;
+    }
+
+        #dorms-intro {
+            /*background: #ff5361;*/
+            width: 50%;
+            display: grid;
+            border-right: solid;
+            border-right-width: 1.5px;
+            border-color: #7b6868;
+        }
+
+        #private-rooms-intro {
+            /*background: green;*/
+            width: 50%;
+            display: grid;
+        }
+
+            .rooms-margin {
+                width: 20vw; 
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+
+                .rooms {
+                    font-family: "cooperBlack";
+                    font-size: 2.5vw;
+                    margin: 30px auto;
+                
+                }
+                .subtitel-rooms {
+                    font-size: 1.6vw;
+                    font-family: "garamond_medium";
+                    font-style: italic;
+                    margin-bottom: 15px;
+                }
+                .img-rooms {
+                    width: 18vw; 
+                    margin: 20px auto;
+                }
+                .characteristics-romms {
+                    font-family: "garamond_light";
+                    font-size: 1.6vw;
+                    margin-bottom: 35px;
+                }
+
+@media screen and (max-width: 1250px) {
+    .rooms-margin {
+        width: 35vw; 
+    }
+
+        .rooms {
+            font-size: 4vw;
+            margin: 3vw auto;
+        }
+
+        .subtitel-rooms {
+            font-size: 2.3vw;
+            margin-bottom: 2vw;
+        }
+
+        .img-rooms {
+            width: 27vw; 
+            margin: 2vw auto;
+        }
+
+        .characteristics-romms {
+            font-size: 2vw;
+            margin-bottom: 4vw;
+        }
+
+}
+
+@media screen and (max-width: 950px) {
+    
+    #description-rooms {
+        margin: 0 auto;
+        width: 90%;
+        display:block;
+        padding-bottom: 5vw;
+    }
+
+        #dorms-intro {
+            /*background: #ff5361 ;*/
+            width: 100%;
+            display: grid;
+            border-right: none;
+            border-bottom: solid;
+            border-bottom-width: 1.5px;
+            border-color: #7b6868;
+            padding-bottom: 4vw;
+        }
+
+        #private-rooms-intro {
+            /*background: green;*/
+            width: 100%;
+            display: grid;
+            padding-top: 4vw;
+        }
+        
+            .rooms-margin {
+                width: 65vw; 
+            }
+
+                .rooms {
+                    font-size: 6vw;
+                    margin: 5vw auto;
+                }
+
+                .subtitel-rooms {
+                    font-size: 4vw;
+                    margin-bottom: 2vw;
+                }
+
+                .img-rooms {
+                    width: 45vw; 
+                    margin: 2vw auto;
+                }
+
+                .characteristics-romms {
+                    font-size: 3vw;
+                    margin-bottom: 4vw;
+                }
+
+}
+
+/*--- description Facilities -----*/
+
+#facilities-intro {
+    width: inherit;
+}
+
+    #box-facilities {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        padding-top: 7vw;
+        padding-bottom: 7vw;
+    }
+
+        #fotos-facilities {
+            /*background: #ff5361;*/
+            width: 65%;
+            display: grid;
+            border-right: solid;
+            border-right-width: 1.5px;
+            border-color: #7b6868;
+        }
+
+            /*El activities-martin es tanto para #fotos-activities como para #text-activities*/
+            .facilities-margin-img {
+                width: 50vw; 
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+                /*
+                #img-facilities {
+                    /*background: green;
+                    /*width: 50%;
+                    /*display:none;
+                }
+                */
+                    #slideshow-facilities { 
+                        margin: 4vw auto; /* 4vw 3.5vw */
+                        position: relative; 
+                        width: 50vw; 
+                        height: 31vw; 
+                        padding: 10px;
+                        margin-bottom: 70px; 
+                        /*box-shadow: 0 0 20px rgba(0,0,0,0.4);*/
+                        /*background-color: green;*/
+                        /*display: none;*/
+                    }
+                    
+                    #slideshow-facilities > div { 
+                        position: absolute; 
+                        top: 10px; 
+                        left: 10px; 
+                        right: 10px; 
+                        bottom: 10px; 
+                        width: 49vw;  /* 55vw */
+                    }
+            
+                        #slideshow-facilities div img{ 
+                            width: inherit;
+                            float: left;
+                            height: 30vw;
+                            object-fit: cover;
+                        }
+
+        #text-facilities {
+            /*background: green;*/
+            width: 35%;
+            display: grid;
+        }
+
+            .facilities-margin-text {
+                width: 28vw; 
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+
+                .facilities {
+                    font-family: "cooperBlack";
+                    font-size: 2.5vw;
+                    margin: 30px 35px;
+                    text-align: left;
+                }
+                
+                .text-content-facilities {
+                    /*background-color: rgb(255, 83, 97, 0.6);*/
+                    /*height: 23vw;*/
+                    z-index: 9;
+                    position:absolute;
+                    width: 25vw;
+                    margin-left:1.8vw;
+                    font-size: 17px;
+                    margin-top: 1vw;
+                    height: 30vw;
+                }
+                
+                    .text-facilities {
+                        font-family: "garamond_light";
+                        text-align: left;
+                        position:absolute;
+                        bottom: 0;
+                    }
+
+@media screen and (max-width: 1250px) {
+
+    #box-facilities {
+        display: block;
+        padding-top: 3vw;
+    }
+
+        #fotos-facilities {
+            width: 100%;
+            border-right: none;
+        }
+
+
+            .facilities-margin-img {
+                width: 85vw; 
+            }
+
+                #slideshow-facilities { 
+                    margin: 6vw auto;
+                    width: 85vw; 
+                    height: 50vw; 
+                    padding: 0px;
+                    margin-bottom: 6vw; 
+                }
+
+                    #slideshow-facilities > div { 
+                        top: 0px; 
+                        left: 0px; 
+                        right: 0px; 
+                        bottom: 0px; 
+                        width: 85vw; 
+                    }
+
+                        #slideshow-facilities div img{ 
+                            height: 50vw;
+                        }
+
+            #text-facilities {
+                width: 100%;
+                display: grid;
+            }
+    
+                .facilities-margin-text {
+                    width: 100%; 
+                    display: grid;
+                    grid-template-columns: 1fr 1.7fr;
+                    height: 52vw;
+                }
+    
+                    .facilities {
+                        font-size: 4.7vw;
+                        margin: 2vw 3vw;
+                        width: 25vw;
+                        border-right: solid;
+                        border-right-width: 1.5px;
+                        border-color: #7b6868;
+                    }
+                    
+                    .text-content-facilities {
+                        /*background-color: rgb(255, 83, 97, 0.6);*/
+                        position: static;
+                        width: 51vw;
+                        margin-left: 0vw;
+                        font-size: 3.1vw;
+                        margin-top: 3vw;
+                        height: 30vw;
+                    }
+                    
+                        .text-facilities {
+                            font-family: "garamond_light";
+                            text-align: left;
+                            position: static;
+                            bottom: 0;
+                        }
+
+                    }
+
+
+/* ---------- experiencias ---------- */
+
+#experiencia-text {
+    font-family: "cooperBlack";
+    font-size: 6.4vw;
+    background-color: rgba(244, 244, 226, 0.6);
+    z-index: 9;
+    position:absolute;
+    width: 100%; /*45vw;*/
+    height: 56.3vw; /*54.3vw*/
+    /*margin: 1vw 55vw;*/
+}
+
+#experiencia-text p {
+    margin: 5.5vw 11vw auto;
+    color: rgb(252, 97, 0);
+}
+                
+/* -- contact-homepage -- */
+
+#contact-homepage {
+    width: inherit;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    /*sbackground: #ff5361;*/
+    height: 60vw;
+}
+
+    #box-contact {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+    }
+
+        #text-contact {
+            /*background: #ff5361;*/
+            width: 40%;
+            display: grid;
+            border-right: solid;
+            border-right-width: 1.5px;
+            border-color: #7b6868;
+            height: 48vw;
+        }
+
+            .contact-margin-text {
+                width: 28vw; 
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+
+                .contact-homepage {
+                    font-family: "cooperBlack";
+                    font-size: 2.5vw;
+                    margin: 30px 35px;
+                    text-align: left;
+                    margin-bottom: 10vw;
+                }
+
+                    .text-content-contact {
+                        /*background-color: rgb(255, 83, 97, 0.6);*/
+                        /*height: 23vw;*/
+                        z-index: 9;
+                        position:absolute;
+                        width: 25vw;
+                        margin-left:1.8vw;
+                        font-size: 19px;
+                        margin-top: 1vw;
+                        height: 30vw;
+                    }
+
+                        .text-contact {
+                            font-family: "garamond_light";
+                            text-align: left;
+                            position:absolute;
+                            bottom: 0;
+                        }
+              
+        #fotos-contact {
+            /*background: green;*/
+            width: 65%;
+            display: grid;
+        }
+
+            .contact-margin-img  {
+                width: 50vw; 
+                height: 20vw;
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+                /*
+                #img-contact {
+                    width: 18vw; 
+                    margin: 20px auto;
+                    background:#ff5361;
+                }
+                */
+                    .contact-margin-img img {
+                        margin-top: 3vw;
+                        margin-bottom: 5vw;
+                        width: 45vw;
+                        height: 13vw;
+                        object-fit: cover;
+                    }
+
+                        .sociaNetworks-contact{
+                            /*background:#ff5361;*/
+                            text-align: left;
+                            margin: 2.4vw; /*2.4vw*/
+                            margin-top: -1vw;
+                            height: 23vw;
+                        }
+
+                            #contact-margin-1 {
+                                width: 45vw;
+                                margin-top: 0;
+                                height: 24vw;
+                                position:absolute;  
+                                /*background-color: green;*/
+                                border-top: solid;
+                                border-top-width: 1.5px;
+                                border-color: #7b6868;
+                            }
+
+                                #contact-margin-2 {
+                                    position:absolute;
+                                    bottom: 0;
+                                    /*background: #ff5361;*/
+                                    width: 45vw;                          
+                                }
+
+                                    .sociaNetworks-contact h3 {
+                                        font-family: "garamond_B";
+                                        font-size: 1.7vw;
+                                        margin-bottom: 0.6vw;
+                                        margin-top: 0.6vw;
+                                    }
+
+                                    .sociaNetworks-contact p {
+                                        font-family: "garamond_B";
+                                        font-size: 18px;
+                                        font-family: "garamond_light";
+                                        margin-bottom: 0.2vw;
+                                        margin-left: 28vw;
+                                    }
+
+                                    .sociaNetworks-contact a {
+                                        margin-left: 1vw;
+                                    }
+
+                                    /*Parametros para los simpolos de instagram y facebook*/
+
+                                    #icon {
+                                        margin-left: 33vw;
+                                    }
+
+                                    .fa {
+                                        padding: 20px;
+                                        font-size: 30px;
+                                        width: 60px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 5px 2px;
+                                    }
+
+                                    .fa:hover {
+                                        opacity: 0.7;
+                                    }
+
+                                    .fa-facebook {
+                                        background: #3B5998;
+                                        color: white;
+                                    }
+
+                                    .fa-instagram {
+                                        background: rgba(212,40,123,255);
+                                        color: white;
+                                    }
+
+@media screen and (max-width: 1250px) {
+
+    #contact-homepage {
+        height: 156vw;
+        /*background-color: #ff5361;*/
+    }
+    
+            #box-contact {
+            margin: 0 auto;
+            width: 90%;
+            display: grid;
+            height: 150vw;;
+            /*background: #ff5361;*/
+            }
+    
+            #text-contact {
+                /*background: #ff5361;*/
+                width: 100%;
+                display: grid;
+                border-right: none;
+                padding-top: 3vw;
+                padding-bottom: 0vw;
+            }
+    
+                .contact-margin-text {
+                    width: 100%; 
+                    display: grid;
+                    grid-template-columns: 1fr 1.7fr;
+                    height: 55vw;
+                    /*background: #ff5361;*/
+                    border-bottom: solid;
+                    border-bottom-width: 1.5px;
+                    border-color: #7b6868;
+                    padding-bottom: 7vw;
+                }
+    
+                    .contact-homepage {
+                        font-size: 4.7vw;
+                        margin: 2vw 3vw;
+                        width: 24vw;
+                        border-right: solid;
+                        border-right-width: 1.5px;
+                        border-color: #7b6868;
+                        /*background-color: yellow;*/
+                    }
+    
+                        .text-content-contact {
+                            position: static;
+                            width: 54vw;
+                            margin-left: 0vw;
+                            font-size: 3.1vw;
+                            margin-top: 3vw;
+                            height: 30vw;
+                        }
+    
+                            .text-contact {
+                                position: static;
+                            }
+                  
+            #fotos-contact {
+                /*background: green;*/
+                width: 100%;
+                display: grid;
+                padding-bottom: 5vw;
+            }
+    
+                .contact-margin-img  {
+                    width: 100%; 
+                    height: 70vw;
+                    /*background-color: rgb(11, 232, 11);*/
+                    /*display: none;*/
+                }
+            
+                        .contact-margin-img img {
+                            margin-top: 5vw;
+                            margin-bottom: 10vw;
+                            width: 85vw;
+                            height: 25vw;
+                            object-fit: cover;
+                        }
+    
+                            .sociaNetworks-contact /*desde aqui*/{
+                                /*background:#ff5361;*/
+                                text-align: left;
+                                margin: 2.4vw; /*2.4vw*/
+                                margin-top: -1vw;
+                                height: 23vw;
+                            }
+    
+                                #contact-margin-1 {
+                                    width: 85.2vw;
+                                    margin-top: 0;
+                                    height: 43vw;
+                                    position:absolute;
+                                    /*background-color: green;*/
+                                    /*display: none;*/
+                                    padding-top: 5vw;
+                                    border-top: solid;
+                                    border-top-width: 1.5px;
+                                    border-color: #7b6868;
+                                }
+    
+                                    #contact-margin-2 {
+                                        position:absolute;
+                                        bottom: 0;
+                                        width: 85vw;;                           
+                                        /*background: rgb(255, 255, 0, 0.5);*/
+                                    }
+    
+                                        .sociaNetworks-contact h3 {
+                                            font-family: "garamond_B";
+                                            font-size: 3vw;
+                                            margin-bottom: 0.6vw;
+                                            margin-top: 0.6vw;
+                                        }
+    
+                                        .sociaNetworks-contact p {
+                                            font-size: 2.5vw;
+                                            margin-bottom: 0.6vw;
+                                            margin-left: 53vw;
+                                        }
+    
+                                        .sociaNetworks-contact a {
+                                            margin-left: 1vw;
+                                        }
+    
+                                        /*Parametros para los simpolos de instagram y facebook*/
+                                        
+                                        #icon {
+                                            margin-left: 52vw;
+                                        }
+
+                                            .fa {
+                                                padding: 3vw;
+                                                width: 7.3vw;
+                                                text-align: center;
+                                                margin: 1vw 1vw;  
+                                            }
+
+}
+
+/* ----- ABOUT -----*/
+
+/*Tambien sirve para el titulo de privateRooms*/
+#about-title, #private-title, #facilities-title, #activities-title {
+    
+    width: 90%;
+    margin: 0px auto;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+    border-bottom: solid;
+    border-bottom-width: 1.5px;
+    border-color: #7b6868;
+    
+}
+
+/* la informacion se encuentra en el activities & facilities */
+
+
+
+/* -------------------------------------- Private Rooms &&& Dorms ------------------------------------------ */
+
+
+#private-container {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 5vw; 
+    display: grid;
+    /*align-items: center;*/ 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.55vw;
+    /*background: green;*/ 
+}
+
+    .info-rooms {
+        /*background-color: yellow;*/
+        margin-bottom: 4vw;
+        display: grid;
+    }
+
+        .privat {
+            /*background: #ff5361;*/
+            width: 20vw;
+            height: 25vw;
+            margin: 0 auto;
+        }
+        
+            .privat img {
+                width:  100%; /*65%;*/
+                height: 25vw; 
+                object-fit: cover;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .arrow {
+                display: none; /*none*/
+                background-color: rgb(41, 39, 39, 0.3);
+                position: absolute;
+                z-index: 9;
+                cursor: pointer;
+            }
+
+            .privat:hover .arrow{
+                display: block;
+            }
+        
+                .left {
+                    top: 40%;
+                    left: 0%;
+                    width: 3vw;
+                    height: 5vw;
+                } 
+        
+                .right {
+                    top: 40%;
+                    left: 85.2%;
+                    width: 3vw;
+                    height: 5vw;
+                } 
+        
+            .privat .control {
+                text-decoration: none;
+                border: solid black;
+                border-width: 0 0.3vw 0.3vw 0;
+                display: inline-block;
+                padding: 0.3vw;
+                position: absolute;
+                top: 43%;
+            }
+        
+                .next {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    left: 35%;
+                }
+        
+                .prev {
+                    transform: rotate(135deg);
+                    -webkit-transform: rotate(135deg);
+                    left: 30%
+                }
+        
+        .title-privat {
+            margin: 3%;
+            text-align: center;
+        }
+        
+            .title-privat h3 {
+                font-family: "garamond_medium-Italic";
+                font-size: 2vw;
+            }
+        
+            .title-privat p {
+                font-family: "garamond_light";
+                font-size: 1.2vw;
+            }
+        
+            .title-privat p:hover {
+                font-style: italic;
+                cursor: pointer;
+                color:rgb(252, 97, 0)
+            }  
+
+        .container-info-privat {
+            display: block;
+            position: absolute;
+            /*background-color: #fff;*/
+        }
+
+            /* -- Modo principal en que se encuantra el div con la informacion -- */ 
+
+            .info-privat {
+                display: none;
+            }
+
+            /* -- Modo en que cambia al dar click --*/
+            
+            #info-privat-1.fullscreen, #info-privat-2.fullscreen, #info-privat-3.fullscreen, #info-privat-4.fullscreen, #info-dorm-1.fullscreen, #info-dorm-2.fullscreen, #info-dorm-3.fullscreen, #info-dorm-4.fullscreen, #info-dorm-5.fullscreen {
+                
+                display: block;
+                background: rgb(126, 110, 110);
+                color: white;
+                position: absolute;
+                width: 28.95vw;
+                /*height: 30vw;*/
+                height: 30.6vw;
+                z-index: 9;
+                /*
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                */
+            }
+
+
+                .nameandlevelRoom {
+                    text-align:  center;
+                    margin: 0px auto;
+                    margin-top: 1.5vw;
+                    margin-bottom: 1.7vw;
+                    font-family: "garamond_medium-Italic";
+                    font-size: 1.4vw;
+                }
+
+                    .nameandlevelRoom p {
+                        font-family: "garamond_light";
+                        font-size: 1vw;
+                    }
+
+                .price {
+                    text-align: center;
+                    margin-bottom: 2vw;
+                    font-family: 'garamond_medium';
+                    font-size: 2.5vw;
+                }
+
+                .price-info {
+                    margin-left: 0vw;
+                }
+
+                .COP {
+                    font-size: 1vw;
+                    vertical-align: top;
+                }
+
+                .per-night {
+                    font-size: 1vw;
+                }
+
+                .service-room {
+                    display: inline-block;
+                    margin-left: 18%;
+                }
+
+                .service-list li{
+                    list-style-type: none;
+                    margin-top: 0.7vw;
+                    margin-top: 0.7vw;
+                    font-family: 'garamond_light';
+                }
+
+                .availability {
+                    margin-top: 4vw;
+                }
+
+                .availability {
+                    text-align: center;
+                }
+
+                .availability a {
+                    /*text-decoration: none;*/
+                    color:white;
+                    font-family: 'garamond_light-Italic';
+                    font-size: 1vw;
+                }
+
+                .availability a:hover {
+                    color: yellow; 
+                    font-style: italic;
+                }
+
+
+/*-------- Cambios en Rooms &&& Dorms --------*/
+
+@media screen and (max-width: 1420px) {
+    .info-rooms {
+        margin-bottom: 6.5vw;
+    }
+    
+    #private-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.55vw;
+        margin-top: 8vw;
+    }
+
+    .privat {
+        width: 30vw;
+        height: 40vw;
+    }
+    
+        .privat img {
+            height: 40vw;
+        }
+
+            .left {
+                top: 40%;
+                left: 0%;
+                width: 5vw;
+                height: 9vw;
+            } 
+
+            .right {
+                top: 40%;
+                left: 83.5%;
+                width: 5vw;
+                height: 9vw;
+            } 
+
+    #info-privat-1.fullscreen, #info-privat-2.fullscreen, #info-privat-3.fullscreen, #info-privat-4.fullscreen, #info-dorm-1.fullscreen, #info-dorm-2.fullscreen, #info-dorm-3.fullscreen, #info-dorm-4.fullscreen, #info-dorm-5.fullscreen {
+
+        width: 44.2vw;
+        height: 49.3vw;
+    }
+
+        .nameandlevelRoom {
+            text-align:  center;
+            margin: 0px auto;
+            margin-top: 3vw;
+            margin-bottom: 3.4vw;
+            font-size: 3vw;
+        }
+
+            .nameandlevelRoom p {
+                font-size: 1.4vw;
+            }
+
+        .price {
+            margin-bottom: 3.5vw;
+            font-size: 3vw;
+        }
+
+        .price-info {
+            margin-left: 0vw;
+        }
+
+        .COP {
+            font-size: 1.5vw;
+            vertical-align: top;
+        }
+
+        .per-night {
+            font-size: 1.3vw;
+        }
+
+        .service-room {
+            display: inline-block;
+            margin-left: 24%;
+        }
+
+        .service-list li{
+            list-style-type: none;
+            margin-top: 1.4vw;
+            font-family: 'garamond_light';
+            font-size: 1.5vw;
+        }
+
+        .availability {
+            margin-top: 4vw;
+        }
+
+        .availability {
+            text-align: center;
+            margin-top: 6vw;
+        }
+
+        .availability a {
+            /*text-decoration: none;*/
+            color:white;
+            font-family: 'garamond_light-Italic';
+            font-size: 1.5vw;
+        }
+
+        .availability a:hover {
+            color: yellow; 
+            font-style: italic;
+        }
+
+    .title-privat h3 {
+        font-size: 3.5vw;
+    }
+
+    .title-privat p {
+        font-size: 2vw;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .info-rooms {
+        margin-bottom: 6.5vw;
+    }
+    
+    #private-container {
+        grid-template-columns: 1fr;
+        column-gap: 1.55vw;
+    }
+
+    .privat {
+        width: 50vw;
+        height: 65vw;
+    }
+    
+        .privat img {
+            height: 65vw;
+        }
+
+            .arrow {
+                display: block;
+            }
+
+            .left {
+                top: 40%;
+                left: 0%;
+                width: 8vw;
+                height: 15vw;
+            } 
+
+            .right {
+                top: 40%;
+                left: 84%;
+                width: 8vw;
+                height: 15vw;
+            } 
+
+            .privat .control {
+                border-width: 0 0.5vw 0.5vw 0;
+                padding: 0.7vw;
+            }
+
+    #info-privat-1.fullscreen, #info-privat-2.fullscreen, #info-privat-3.fullscreen, #info-privat-4.fullscreen, #info-dorm-1.fullscreen, #info-dorm-2.fullscreen, #info-dorm-3.fullscreen, #info-dorm-4.fullscreen, #info-dorm-5.fullscreen {
+
+        width: 90vw;
+        height: 79vw;
+    }
+
+        .nameandlevelRoom {
+            text-align:  center;
+            margin: 0px auto;
+            margin-top: 3vw;
+            margin-bottom: 7vw;
+            font-size: 4.5vw;
+        }
+
+            .nameandlevelRoom p {
+                font-size: 2vw;
+            }
+
+        .price {
+            margin-bottom: 5vw;
+            font-size: 5vw;
+        }
+
+        .price-info {
+            margin-left: 0vw;
+        }
+
+        .COP {
+            font-size: 2vw;
+            vertical-align: top;
+        }
+
+        .per-night {
+            font-size: 1.8vw;
+        }
+
+        .service-room {
+            display: inline-block;
+            margin-left: 29%;
+        }
+
+        .service-list li{
+            list-style-type: none;
+            margin-top: 1.8vw;
+            font-family: 'garamond_light';
+            font-size: 2.4vw;
+        }
+
+        .availability {
+            margin-top: 9vw;
+        }
+
+        .availability {
+            text-align: center;
+            margin-top: 12vw;
+        }
+
+        .availability a {
+            /*text-decoration: none;*/
+            color:white;
+            font-family: 'garamond_light-Italic';
+            font-size: 2.5vw;
+        }
+
+        .availability a:hover {
+            color: yellow; 
+            font-style: italic;
+        }
+
+    .title-privat h3 {
+        font-size: 4.7vw;
+    }
+
+    .title-privat p {
+        font-size: 2.5vw;
+    }
+
+
+}
+
+/* --------------------------- FACILITIES ------------------------------- */
+
+#facilities-container {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 5vw;
+    display: grid;
+    /*align-items: center;*/ 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.55vw;
+    /*background: green;*/
+}
+
+    .info-facilities {
+        /*background: rgb(256,236,220);*/
+        /*background-color: yellow;*/
+        margin-bottom: 4vw;
+        display: grid;
+    }
+
+        .facilitie {
+            /*background: #ff5361;*/
+            height: 25vw;
+        }
+
+            .f-vertical img {
+                width: 65%;
+                height: 25vw;
+                object-fit: cover;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .f-horizontal img {
+                width: 100%;
+                height: 18vw;
+                margin-top: 3.4vw;
+                object-fit: cover;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+.text-facilitie {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+    top: 52vh;
+    /*background-color: yellow;*/
+    z-index: 9;
+}
+
+    .container-text-facilities {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        font-family: 'cooperBlack';
+        font-size: 3.5vw;
+        text-shadow: 4px 1px 2px rgb(242, 237, 138);
+        color:#7b6868;
+        /*background-color: rgb(241, 245, 241, 0.5);*/
+        pointer-events: none;
+    }
+
+        .container-text-facilities p {
+            margin-left: 1.5vw;
+            width: inherit;
+            position:absolute;
+            bottom: 0;
+        }
+
+/*
+.text-facilitie:hover {
+    display:block;
+}
+*/             
+
+/*-------- cambios - facilities --------*/
+
+@media screen and (max-width: 1420px) {
+    #facilities-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.55vw;
+    }
+
+        .info-facilities {
+            margin-bottom: 5vw;
+        }
+
+            .facilitie {
+                height: 40vw;
+            }
+
+                .f-vertical img {
+                    height: 40vw;
+                }
+
+
+                .f-horizontal img {
+                    height: 25vw;
+                    margin-top: 7.3vw;
+                }
+
+    .text-facilitie {
+        top: 55vh;
+    }
+    
+        .container-text-facilities {
+            font-size: 5vw;
+        }
+    
+            .container-text-facilities p {
+                margin-left: 1.5vw;
+            }
+
+    #p1 {
+        order: 1;
+    }
+    #p2 {
+        order: 2;
+    }
+    #p3 {
+        order: 4;
+    }
+    #p4 {
+        order: 3;
+    }
+    #p5 {
+        order: 5;
+    }
+    #p6 {
+        order: 6;
+    }
+    #p7 {
+        order: 8;
+    }
+    #p8 {
+        order: 7;
+    }
+    #p9 {
+        order: 9;
+    }
+    #p10 {
+        order: 10;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    #facilities-container {
+        grid-template-columns: 1fr;
+        column-gap: 1.55vw;
+    }
+
+        .info-facilities {
+            margin-bottom: 7vw;
+        }
+
+            .facilitie {
+                height: 70vw;
+            }
+
+                .f-vertical img {
+                    height: 70vw;
+                }
+
+
+                .f-horizontal img {
+                    height: 50vw;
+                    margin-top: 10.5vw;
+                }
+
+    .text-facilitie {
+        top: 57vh;
+        display: none; 
+    }
+    
+        .container-text-facilities {
+            width: 87%;
+            font-size: 6vw;
+        }
+    
+            .container-text-facilities p {
+                margin-left: 1.5vw;
+            }
+
+    #p1 {
+        order: 1;
+    }
+    #p2 {
+        order: 2;
+    }
+    #p3 {
+        order: 3;
+    }
+    #p4 {
+        order: 4;
+    }
+    #p5 {
+        order: 5;
+    }
+    #p6 {
+        order: 6;
+    }
+    #p7 {
+        order: 7;
+    }
+    #p8 {
+        order: 8;
+    }
+    #p9 {
+        order: 9;
+    }
+    #p10 {
+        order: 10;
+    }
+
+}
+                
+
+/*-------------------------------- ACTIVITIES ----------------------------------------*/
+
+.text-photo-intro {
+    width: inherit;
+}
+
+.margin1-text-photo {
+    margin-top: 6vw;
+}
+
+    .text-photo-box {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        margin-bottom: 6vw;
+    }
+
+        .text-photo-picture {
+            /*background: #ff5361;*/
+            width: 65%;
+            display: grid;  
+        }
+
+        .border-r {
+            border-right: solid;
+            border-right-width: 1.5px;
+            border-color: #7b6868;
+        }
+
+        .border-l {
+            border-left: solid;
+            border-left-width: 1.5px;
+            border-color: #7b6868;
+        }
+
+            /*El activities-martin es tanto para #fotos-activities como para #text-activities*/
+            .text-photo-margin-img {
+                width: 90%; 
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+
+                .text-photo-margin-img img {
+                    width: 100%;
+                    height: 40vw;
+                    /*margin-top: 3.4vw;*/
+                    object-fit: cover;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                /*
+                #slideshow-facilities { 
+                    margin: 4vw auto; /* 4vw 3.5vw 
+                    position: relative; 
+                    width: 50vw; 
+                    height: 31vw; 
+                    padding: 10px;
+                    margin-bottom: 70px; 
+                    /*box-shadow: 0 0 20px rgba(0,0,0,0.4);
+                    background-color: green;
+                    /*display: none;
+                }
+                */
+                /*
+                #slideshow-facilities > div { 
+                    position: absolute; 
+                    top: 10px; 
+                    left: 10px; 
+                    right: 10px; 
+                    bottom: 10px; 
+                    width: 49vw;  /* 55vw 
+                }
+                */
+                /*
+                #slideshow-facilities div img{ 
+                    width: inherit;
+                    float: left;
+                    height: 30vw;
+                    object-fit: cover;
+                }
+                */
+
+        .text-photo-TEXT {
+            /*background: green;*/
+            width: 35%;
+            display: grid;
+        }
+
+            .text-photo-margin-text {
+                width: 28vw; 
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+
+                .text-photo-title {
+                    font-family: "cooperBlack";
+                    font-size: 2.5vw;
+                    margin: 30px 35px;
+                    text-align: left;
+                }
+                
+                .text-photo-TEXTcontent {
+                    /*background-color: rgb(255, 83, 97, 0.6);*/
+                    /*height: 23vw;*/
+                    z-index: 9;
+                    position:absolute;
+                    width: 25vw;
+                    margin-left:1.8vw;
+                    font-size: 17px;
+                    margin-top: 1vw;
+                    height: 30vw;
+                }
+                
+                    .text-photo-TEXTcontent p {
+                        font-family: "garamond_light";
+                        text-align: left;
+                        position:absolute;
+                        bottom: 0;
+                    }
+
+
+
+#gallery, #gallery a, #gallery a img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}    
+
+#gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#gallery a {
+    width: 390px;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 5px #000;
+}
+
+#gallery a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#gallery a img:hover {
+    transform: scale(1.02);
+}
+
+/* cambios de activities */
+
+@media screen and (max-width: 1000px) {
+
+    .text-photo-box{
+        width: 90%;
+        margin: 0px auto;
+        display: grid;
+        /*align-items: center;*/ 
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+        column-gap: 1.55vw;
+    }
+
+        .text-photo-picture {
+            width: 100%;
+            height: 58vw;
+        }
+
+        .border-r {
+            border-right: none;
+            border-right-width: 1.5px;
+            border-color: black;
+        }
+
+        .border-l {
+            border-left: none;
+            border-left-width: 1.5px;
+            border-color: black;
+        }
+
+                .text-photo-margin-img img {
+                    width: 100%;
+                    height: 58vw;
+                    /*margin-top: 3.4vw;*/
+                    object-fit: cover;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+        .text-photo-TEXT {
+            width: 100%;
+            /*background-color: #ff5361;*/
+            height: 45vw;
+            padding-top: 3.5vw;
+            margin-top: 8vw;
+            margin-bottom: 8vw;
+            border-bottom: solid;
+            border-bottom-width: 1.5px;
+            border-color: black;
+            border-top: solid;
+            border-top-width: 1.5px;
+        }
+
+            .text-photo-margin-text {
+                width: 100%;
+                height: 50vw;
+                margin: 0px auto;
+                padding-top: 2vw;
+                display: grid; /*flex*/
+                /*align-items: center;*/ 
+                grid-template-columns: 1fr 2fr;
+            }
+                
+                .text-photo-title {
+                    font-size: 25px;
+                    margin-top: 1.3vw;
+                }
+                
+                .text-photo-TEXTcontent {
+                    position:static;
+                    width: 88%;
+                    height: 88%;
+                    font-size: 2.5vw;
+                }
+
+                .text-photo-TEXTcontent p {
+                    position: static;
+                }
+    
+    .order_1 {
+        order: 2;
+    }
+
+    .order_2 {
+        order: 1;
+    }
+                
+
+
+}
+
+/*------------------------------------------- CONTACT ----------------------------------------*/
+
+#contact-container {
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    /*align-items: center;*/ 
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    column-gap: 1.55vw;
+    /*background: green;*/
+}
+
+    .contact-info-location {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 10vw;
+        /*background-color: #ff5361;*/
+        border-bottom: solid;
+        border-bottom-width: 1.5px;
+        border-color: #7b6868;
+        margin-top: 1vw;
+        padding-left: 3vw;
+    }
+
+        .contact-info-location h3 {
+            font-family: 'garamond_medium-Italic';
+            font-size: 3.5vw;
+            padding-left: 2vw;
+            padding-top: 0.5vw;
+        }
+
+        .contact-info-location p {
+            font-family: 'garamond_light';
+            font-size: 1.5vw;
+            padding-top: 2.2vw;
+        }
+
+    #contact-map-google {
+        width: 100%;
+        display: grid;
+        margin: 0 auto;
+        margin-top: 2vw;
+        padding-top: 5vw;
+        height: 32vw;
+        border-bottom: solid;
+        border-bottom-width: 1.5px;
+        border-color: #7b6868;
+        /*background-color: yellow;*/
+    }    
+
+        #contact-map-google img {
+            display: grid;
+            margin: 0 auto;
+            width: 70vw;
+            height: 20vw;
+            object-fit: cover;
+        }
+
+    #contac-email{
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+        border-bottom: solid;
+        border-bottom-width: 1.5px;
+        border-color: #7b6868;
+    }
+
+        #text-email {
+            /*background: green;*/
+            width: 42%;
+            display: grid;
+            border-right: solid;
+            border-right-width: 1.5px;
+            border-color: #7b6868;
+        }
+
+            .email-margin-text {
+                width: 30vw;
+                margin: 0 auto;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+
+                .email-title {
+                    font-family: "garamond_medium-Italic";
+                    font-size: 3.5vw;
+                    margin: 2vw 2.1vw;
+                    text-align: left;
+                }
+                
+                .text-content-email {
+                    /*background-color: rgb(255, 83, 97, 0.6);*/
+                    z-index: 9;
+                    position:absolute;
+                    height: 27vw;
+                    width: 26.3vw;
+                    margin-left:1.8vw;
+                    margin-top: 1.5vw;
+                    font-size: 18px;
+                }
+                
+                    .text-email {
+                        font-family: "garamond_light";
+                        text-align: left;
+                        position:absolute;
+                        bottom: 0;
+                    }           
+
+        .container-email {
+            width: 65%;
+            height: 42vw;
+            /*background: #ff5361;*/
+            display: grid;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+            form {
+                background: hsla(0, 7%, 45%, 0.5);
+                display: flex;
+                flex-direction: column;
+                padding: 2vw 4vw;
+                width: 45vw;
+                height: 35vw;
+                /*max-width: 700px;*/
+            }
+
+                form h3 {
+                    font-family: 'garamond_medium-italic';
+                    font-size: 3vw;
+                    color: rgb(98, 88, 88, 0.9);
+                    font-weight: 800;
+                    margin-bottom: 2vw;
+                    text-align: center;
+                }
+
+                form input, form textarea {
+                    font-family: 'garamond_light';
+                    font-size: 1.3vw;
+                    border: 0;
+                    margin: 1vw 0;
+                    padding-left: 1.2vw;
+                    outline: none;
+                    background: hsla(0, 7%, 45%, 0.3);
+                }
+
+                form textarea {
+                    padding-top: 1vw;
+                }
+
+                form button {
+                    font-family: 'garamond_medium-italic';
+                    padding: 0.8vw;
+                    font-size: 2.5vw;
+                    background: hsla(0, 7%, 45%, 0.5);
+                    color: rgb(98, 88, 88, 0.9);
+                    border: 0;
+                    outline: none;
+                    cursor: pointer;
+                    width: 150px;
+                    margin: 20px auto 0;
+                }
+
+                form button:hover {
+                    background: hsla(0, 7%, 45%, 1);;
+                    color: white;
+                }
+
+    #call {
+        padding-top: 3vw;
+        height: 15vw;
+    }
+
+    #follow {
+        padding-top: 3vw;
+        height: 15vw;
+        border-bottom: none;
+    }
+
+
+    #logo-contact .fa {
+        padding: 31px;
+        font-size: 30px;
+        width: 90px;
+        height: 90px;
+        text-align: center;
+        text-decoration: none;
+        margin: 1vw 0.6vw;
+    }
+
+@media screen and (max-width: 1040px) {
+
+            #location {
+                height: 15vw;
+            }
+
+            .contact-info-location h3 {
+                font-size: 4.5vw;
+            }
+    
+            .contact-info-location p {
+                font-size: 20px;
+                padding-top: 2.4vw;
+            }
+    
+        #contact-map-google {
+            height: 45vw;
+            padding-top: 9vw;
+        }    
+    
+            #contact-map-google img {
+                width: 85vw;
+                height: 25vw;
+            }
+    
+        #contac-email{
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            padding-top: 12vw;
+            height: 185vw;
+        }
+    
+            #text-email {
+                height: 60vw;
+                display: grid;
+                margin-bottom: 5vw;
+                margin-top: 5vw;
+            }
+    
+                .email-margin-text {
+                    width: 90vw;
+                    display: grid;
+                    grid-template-columns: 1fr 1.2fr;
+                }
+    
+                    .email-title {
+                        font-size: 4.5vw;
+                        padding-left: 3vw;
+                        margin: 2vw 2.1vw;
+                    }
+                    
+                    .text-content-email {
+                        position: static;
+                        height: 35vw;
+                        width: 46vw;
+                        margin-left:0vw;
+                        margin-top: 3vw;
+                        font-size: 3.1vw;
+                    }
+                    
+                        .text-email {
+                            position:static;
+                        }           
+    
+            .container-email {
+                width: 100%;
+                height: 80vw;
+            }
+    
+                form {
+                    padding: 2vw 4vw;
+                    width: 85vw;
+                    height: 80vw;
+                }
+    
+                    form h3 {
+                        margin-top: 4vw;
+                        font-size: 6vw;
+                        font-weight: 800;
+                        margin-bottom: 4vw;
+                        text-align: center;
+                    }
+    
+                    form input, form textarea {
+                        font-size: 2.5vw;
+                        margin: 1vw 0;
+                        padding-left: 2vw;
+                        color:white;
+                    }
+    
+                    form button {
+                        font-size: 4vw;
+                        width: 25vw;
+                        margin: 0 auto ;
+                        margin-top: 4vw;
+                    }
+
+        .call-follow {
+            padding-top: 2vw;
+        }
+
+        #call, #follow {
+            padding-top: 5vw;
+            height: 26vw;
+        }
+    
+        #logo-contact .fa {
+            padding: 31px;
+            font-size: 30px;
+            width: 90px;
+            height: 90px;
+            text-align: center;
+            text-decoration: none;
+            margin: 1vw 0.6vw;
+        }
+
+}
+    
+/* -----------------------------------  FAQs   ----------------------------------------*/
+
+#faqs-container {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+}
+
+    .demo {
+        margin: 0 auto;
+        width: 100%;
+        /*background: #ff5361;*/
+        margin-top: 3vw;
+        margin-bottom: 5vw;
+    }
+
+        .panel-heading {
+            display: grid;
+            align-items: center;
+            color: rgb(98, 88, 88, 0.9);
+            /*background-color: yellow;*/
+            font-family: 'garamond_semiBold-Italic';
+            font-size: 3vw;
+            text-align: center;
+            height: 10vw;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            /*border-bottom: solid;
+            border-bottom-width: 1.5px;
+            */
+        }
+
+        .panel-heading:hover {
+            background: rgba(122, 107, 107, 0.2);
+            
+        }
+
+        .panel-body {
+            display: grid;
+            align-items: center;
+            padding: 3vw 4vw 3vw 4vw;
+            font-size: 2vw;
+            font-family: 'garamond_light';
+        }
+
+@media screen and (max-width: 1040px) {
+
+    .panel-heading {
+        font-size: 25px;
+        height: 16vw;
+    }
+
+    .panel-body {
+        padding: 6vw 7vw 6vw 7vw;
+        font-size: 20px;
+    }    
+
+}
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
