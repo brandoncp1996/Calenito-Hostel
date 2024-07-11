@@ -1,1 +1,1 @@
-Merged content from both branches.
+Content from the current branch
